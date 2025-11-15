@@ -103,9 +103,6 @@ body.dark {
   box-shadow: 0 0 8px var(--accent); /* Subtle glow */
 }
 
-/* --- PRO FEATURE 1: ACCESSIBILITY (A11y) FOCUS STATES --- */
-/* Removes the ugly default focus ring but maintains accessibility */
-
 *:focus:not(:focus-visible) {
   outline: none;
   box-shadow: none;
