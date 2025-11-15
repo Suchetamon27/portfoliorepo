@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 export default function Projects() {
 const list = [
 { title: "Portfolio Website", desc: "Built using React + Tailwind" },
-{ title: "AI Chatbot", desc: "Interactive assistant with animations" },
-{ title: "UI Showcase", desc: "Modern UI components" }
+{ title: "Hotel Booking Website", desc: "Modern UI components" },
+{ title: "WBJEE Rank & College Predictor Website",desc: "Accurate rank predictor analysis for student assistance"},
 ];
 
 
