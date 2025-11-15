@@ -1,4 +1,4 @@
-import { Particles } from "tsparticles-react";
+import Particles from "@tsparticles/react";
 
 export default function ParticlesBG() {
   return (
