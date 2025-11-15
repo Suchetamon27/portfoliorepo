@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* Smooth scroll */
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body.dark {
@@ -14,26 +12,73 @@ body.dark {
   color: white;
 }
 
-/* Glass */
+/* Glass: ENHANCED GLASS MORPHISM */
 .glass {
-background: rgba(255, 255, 255, 0.08);
-filter: blur(0px);
-border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Reduced background opacity */
+  background: rgba(255, 255, 255, 0.05); 
+  
+  /* CRITICAL: Use backdrop-filter for the actual glass effect */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  
+  filter: none;
+  
+  /* Stronger border and rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+  border-radius: 1rem; 
+  
+  /* Add subtle transition for hover effects */
+  transition: all 0.3s ease-in-out; 
 }
 
+/* Hover effect for glass elements */
+.glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Depth Preparation to enable 3D perspective on a container */
+.perspective-container {
+  perspective: 1000px;
+}
+
+/* Depth Preparation for 3D tilt effect on elements */
+.card-3d-tilt {
+  transition: transform 0.4s ease-out; 
+  transform: rotateX(0) rotateY(0) scale(1);
+}
+
+.card-3d-tilt:hover {
+  /* Subtle 3D rotation and scale on hover */
+  transform: rotateX(2deg) rotateY(3deg) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+}
 
 /* Neon glow */
 .neon {
-box-shadow: 0 0 20px var(--accent);
+  box-shadow: 0 0 20px var(--accent);
 }
 
-
-/* Custom cursor */
+/* Custom cursor: ENHANCED STYLING */
 .cursor-dot,
 .cursor-outline {
-position: fixed;
-pointer-events: none;
-z-index: 9999;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
 }
 
+.cursor-outline {
+  mix-blend-mode: difference; /* Ensures the cursor is always visible against any color */
+  border: 2px solid white; 
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: all 0.1s ease-out;
+}
 
+.cursor-dot {
+  background-color: white;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
