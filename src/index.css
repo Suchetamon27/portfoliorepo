@@ -9,6 +9,10 @@ html {
 scroll-behavior: smooth;
 }
 
+body.dark {
+  background: #0f0f0f;
+  color: white;
+}
 
 /* Glass */
 .glass {
