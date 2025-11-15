@@ -82,3 +82,23 @@ body.dark {
   width: 8px;
   border-radius: 50%;
 }
+
+/* Highlight active link with a glow and a transition effect */
+.nav-active {
+  color: var(--accent) !important; /* Forces the accent color */
+  font-weight: 600; /* Semi-bold */
+  position: relative;
+}
+
+/* Add an animated, growing underline */
+.nav-active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px; /* Position below the text */
+  left: 0;
+  background-color: var(--accent);
+  border-radius: 9999px; /* Pill-shaped underline */
+  box-shadow: 0 0 8px var(--accent); /* Subtle glow */
+}
