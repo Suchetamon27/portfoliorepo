@@ -102,3 +102,25 @@ body.dark {
   border-radius: 9999px; /* Pill-shaped underline */
   box-shadow: 0 0 8px var(--accent); /* Subtle glow */
 }
+
+/* --- PRO FEATURE 1: ACCESSIBILITY (A11y) FOCUS STATES --- */
+/* Removes the ugly default focus ring but maintains accessibility */
+
+*:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+*:focus-visible {
+  /* Use your accent color for a cool, custom glow/outline */
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Optional: Apply a custom focus state to buttons/links */
+.btn:focus-visible,
+a:focus-visible {
+  box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.4); /* Pink/accent glow */
+  outline: none;
+}
